@@ -979,7 +979,8 @@ body {
     }
     .project .inner .item_wrap .right .btn {
         margin: 0 auto;
-        column-gap: 8px;
+        column-gap: 0;
+        justify-content: space-between;
     }
     .about .inner .item_wrap .right .item .box_wrap img {
         margin-right: 10px;
