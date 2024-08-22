@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오(김현곤)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /><!-- swiper -->
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script><!-- jQuery-ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- swiper -->
+    <script src="js/common.js"></script>
+    <script>
+        $(function () {
+
+            /* 인트로 */
+            // setTimeout(() => $('.intro').removeClass('on'), 3000);
+            setTimeout(() => $('.intro').addClass('off'), 3000);
+            setTimeout(() => $('.intro p').addClass('on'), 500);
+            setTimeout(() => $('.intro strong').addClass('on'), 1500);
+
+            /* 인트로 시작 시 스크롤 막기 */
+            $('body').addClass('on');
+            $('body').on('scroll touchmove mousewheel', function () {
+                return false;
+            });
+            setTimeout(() =>
+                $('body').off('scroll touchmove mousewheel'), 3000);
+            setTimeout(() =>
+                $('body').removeClass('on'), 3000);
+
+            /* 스크롤 시 콘텐츠 나타내기 */
+            window.addEventListener('scroll', function () {
+                let about = document.querySelector('.about');
+                let contact = document.querySelector('.contact');
+                let scrollBar = window.scrollY;
+
+                if ($(window).width() >= 1024) {
+                    if (500 < scrollY) {
+                        about.classList.add('scroll_on');
+                    } else {
+                        about.classList.remove('scroll_on')
+                    }
+                    // if (5000 < scrollY) {
+                    //     contact.classList.add('scroll_on');
+                    // } else {
+                    //     contact.classList.remove('scroll_on');
+                    // }
+                }
+                // console.log(scrollBar);
+                if ($(window).width() < 1024) {
+                    about.classList.add('scroll_on');
+                    // contact.classList.add('scroll_on');
+                }
+            });
+
+            /* up버튼 */
+            $('.up_btn').click(function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700)
+            });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 0) {
+                    $('.up_btn').css({
+                        'display': 'block'
+                    })
+                    $('.main_btn').removeClass('on');
+                } else {
+                    $('.up_btn').css({
+                        'display': 'none'
+                    })
+                    $('header').removeClass('on');
+                    $('.gnb li').removeClass('on');
+                    $('.main_btn').addClass('on');
+                }
+            });
+
+            /* 슬라이드 */
+            var swiper = new Swiper(".design_slide", {
+                watchSlidesProgress: true,
+                freeMode: false,
+                enteredSlides: true,
+                speed: 8e3,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                // pauseOnHover: true,
+                allowTouchMove: true,
+                slidesPerView: 2,
+                breakpoints: {
+                    620: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+            // $('.design_slide').on('mouseenter', function (e) {
+            //     console.log('stop autoplay');
+            //     $(this).stopAutoplay();
+            // })
+            // $('.design_slide').on('mouseleave', function (e) {
+            //     console.log('start autoplay');
+            //     Swiper.startAutoplay();
+            // })
+            // $('.swiper-slide').mouseenter(function (event) {
+            //     swiper.autoplay.stop();
+            // });
+            // $('.swiper-slide').on('mouseout', function (e) {
+            //     swiper.autoplay.start();
+            // });
+        }); //script end
+
+    </script>
+</head>
+
+<body>
+    <div class="bg">
+        <span>배경</span>
+    </div>
+
+    <div class="up_btn">
+        <img src="img/icon/up_btn.png" alt="위로가기">
+    </div><!-- .up_btn end -->
+
+    <div class="intro on">
+        <div class="intro_wrap">
+            <p>Beyond compare.</p>
+            <strong>완전히 새로운 차원.</strong>
+        </div><!-- .wrap end -->
+    </div><!-- .intro end -->
+
+    <header id="header"></header>
+
+    <div class="main">
+        <div class="inner">
+            <div class="pdf">
+                <h2>Portfolio</h2>
+                <a href="#">포트폴리오 PDF <img src="img/icon/grey.png" alt="PDF 바로가기"></a>
+            </div>
+            <div class="text">
+                <strong>Experience,</strong>
+                <span>
+                    <p>
+                        A Differentiated<br>
+                        Experience.
+                    </p>
+                    <p>저 김현곤은 혁신적인 아이디어와
+                        무한한 기술력을 바탕으로
+                        차별화된 사용자 경험을 제공합니다.</p>
+                </span>
+            </div><!-- .text end -->
+            <figure>
+                <img src="img/contact_bg.png" alt="메인이미지">
+            </figure>
+        </div><!-- .inner end -->
+    </div><!-- .main end -->
+
+    <div class="about" id="about">
+        <div class="inner">
+            <h3>About</h3>
+
+            <div class="item_wrap">
+
+                <div class="left">
+                    <img src="img/증명사진.jpg" alt="증명사진">
+                    <a href="#">이력서 바로가기 <img src="img/icon/right-blue.png" alt="이력서 바로가기"></a>
+                </div><!-- .left end -->
+
+                <div class="right">
+                    <div class="item">
+                        <h4>인적 사항</h4>
+                        <div class="box_wrap">
+                            <div class="box">
+                                <strong>성 명</strong>
+                                <p>김현곤</p>
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>연락처</strong>
+                                <p>010-5199-2714</p>
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>생년월일</strong>
+                                <p>2001.06.25.</p>
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>이메일</strong>
+                                <p>hgonnnnn5@gmail.com</p>
+                            </div><!-- .box end -->
+                        </div><!-- .box_wrap end -->
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>학력 사항</h4>
+                        <div class="box_wrap">
+                            <div class="box">
+                                <strong>2024.08.</strong>
+                                <div class="boxbox">
+                                    <p>그린컴퓨터아카데미</p>
+                                    <p>반응형 UI/UX 웹디자인 & 웹퍼블리셔
+                                        웹콘텐츠 개발자 양성과정 수료</p>
+                                </div><!-- .boxbox end -->
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>2022.02.</strong>
+                                <div class="boxbox">
+                                    <p>부산보건대학교<span>스마트팩토리과</span></p>
+                                    <p>졸업</p>
+                                </div><!-- .boxbox end -->
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>2020.02.</strong>
+                                <div class="boxbox">
+                                    <p>김해고등학교</p>
+                                    <p>졸업</p>
+                                </div><!-- .boxbox end -->
+                            </div><!-- .box end -->
+                        </div><!-- .box_wrap end -->
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>자격 및 면허 취득 사항 </h4>
+                        <div class="box_wrap">
+                            <div class="box">
+                                <strong>2021.08.</strong>
+                                <div class="boxbox">
+                                    <p>MOS</p>
+                                    <p>Microsoft</p>
+                                </div><!-- .boxbox end -->
+                            </div><!-- .box end -->
+                            <div class="box">
+                                <strong>2020.11.</strong>
+                                <div class="boxbox">
+                                    <p>자동차운전면허 (2종)</p>
+                                    <p>경찰청</p>
+                                </div><!-- .boxbox end -->
+                            </div><!-- .box end -->
+                        </div><!-- .box_wrap end -->
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>기술 보유 능력 사항 </h4>
+                        <div class="box_wrap">
+                            <img src="img/icon/html.svg" alt="html">
+                            <img src="img/icon/css.svg" alt="css">
+                            <img src="img/icon/js.svg" alt="자바스크립트">
+                            <img src="img/icon/icon_jquery.png" alt="제이쿼리">
+                            <img src="img/icon/photo.svg" alt="포토샵">
+                            <img src="img/icon/illust.svg" alt="일러스트">
+                            <img src="img/icon/figma.svg" alt="피그마">
+                            <img src="img/icon/github.svg" alt="깃허브">
+                            <!-- <img src="img/icon/node.svg" alt="노드">
+                            <img src="img/icon/react.svg" alt="리액트"> -->
+                        </div><!-- .box_wrap end -->
+                    </div><!-- .item end -->
+
+                </div><!-- .right end -->
+            </div><!-- .item_wrap end -->
+
+        </div><!-- .inner end -->
+    </div><!-- .about end -->
+
+    <div class="project one">
+        <div class="inner">
+            <h3>Project</h3>
+            <div class="item_wrap">
+                <div class="left">
+                    <img src="img/nothing_pc.png" alt="낫싱PC">
+                    <img src="img/nothing_mobile.png" alt="낫싱모바일">
+                </div><!-- .left end -->
+                <div class="right">
+                    <div class="top">
+                        <h4>NOTHING</h4>
+                        <p>낫싱.</p>
+                        <span>브랜드의 디자인 철학을 바탕으로 강인함이
+                            느껴지도록 디자인 하였습니다.</span>
+                    </div><!-- .top end -->
+                    <div class="line"></div>
+                    <div class="btm">
+                        <div class="text">
+                            <p>Type</p>
+                            <p>반응형 웹 디자인,
+                                1인 작업<br>
+                                <span>(기획, 디자인, 퍼블리싱 100%)</span>
+                            </p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Page</p>
+                            <p>메인 페이지<span>(반응형)</span>, 서브 페이지<span>(1P)</span>.<br><span>(Ear 더 알아보기 버튼 클릭 시
+                                    이동합니다.)</span></p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Tools</p>
+                            <p>HTML, CSS, JS, Photoshop.</p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Library</p>
+                            <p>jQuery, jQuery-ui, Swiper.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .btm end -->
+                    <div class="line"></div>
+                    <div class="btn">
+                        <button type="button" onclick="window.open('https://kr.nothing.tech/')">ORIGINAL</button>
+                        <button type="button" onclick="window.open('https://hgonnnnn.github.io/nothing01/')">WEB</button>
+                        <button type="button" onclick="window.open('img/낫싱.pdf')">PROCESS</button>
+                    </div><!-- .btn end -->
+                </div><!-- .right end -->
+            </div><!-- .item_wrap end -->
+        </div><!-- .inner end -->
+    </div><!-- .projext end -->
+
+    <div class="project change two">
+        <div class="inner">
+            <div class="item_wrap">
+                <div class="right">
+                    <div class="top">
+                        <h4>GS 에너지</h4>
+                        <p>지에스 에너지.</p>
+                        <span>기존 홈페이지의 정보를 그대로 가져왔으나 깔끔하게
+                            느껴지도록 리디자인한 웹사이트 모작입니다.</span>
+                    </div><!-- .top end -->
+                    <div class="line"></div>
+                    <div class="btm">
+                        <div class="text">
+                            <p>Type</p>
+                            <p>반응형 웹 디자인,
+                                1인 작업 모작<br>
+                                <span>(디자인, 퍼블리싱 100%)</span>
+                            </p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Page</p>
+                            <p>메인 페이지.</p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Tools</p>
+                            <p>HTML, CSS, JS.</p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Library</p>
+                            <p>jQuery, jQuery-ui, Swiper.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .btm end -->
+                    <div class="line"></div>
+                    <div class="btn">
+                        <button type="button" onclick="window.open('https://www.gsenergy.co.kr/')">ORIGINAL</button>
+                        <button type="button" onclick="window.open('https://hgonnnnn.github.io/GS/#')">WEB</button>
+                    </div><!-- .btn end -->
+                </div><!-- .right end -->
+                <div class="left">
+                    <img src="img/gs_pc.png" alt="지에스PC">
+                    <img src="img/gs_mobile.png" alt="지에스모바일">
+                </div><!-- .left end -->
+            </div><!-- .item_wrap end -->
+        </div><!-- .inner end -->
+    </div><!-- .projext end -->
+
+    <div class="project three">
+        <div class="inner">
+            <div class="item_wrap">
+                <div class="left">
+                    <img src="img/diesel_pc.png" alt="디젤PC">
+                    <img src="img/diesel_mobile.png" alt="디젤모바일">
+                </div><!-- .left end -->
+                <div class="right">
+                    <div class="top">
+                        <h4>DIESEL</h4>
+                        <p>디젤.</p>
+                        <span>기존의 정리되지 않은 부분들을 정리하고 브랜드의
+                            매력을 온전히 느낄 수 있도록 리디자인 하였습니다.</span>
+                    </div><!-- .top end -->
+                    <div class="line"></div>
+                    <div class="btm">
+                        <div class="text">
+                            <p>Type</p>
+                            <p>반응형 웹 디자인,
+                                1인 작업<br>
+                                <span>(기획, 디자인, 퍼블리싱 100%)</span>
+                            </p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Page</p>
+                            <p>메인 페이지.</p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Tools</p>
+                            <p>HTML, CSS, JS, Figma.</p>
+                        </div><!-- .text end -->
+                        <div class="text">
+                            <p>Library</p>
+                            <p>jQuery, Swiper.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .btm end -->
+                    <div class="line"></div>
+                    <div class="btn">
+                        <button type="button"
+                            onclick="window.open('https://www.figma.com/design/DKx7HCZdDC14rLGzzDq23U/%EB%94%94%EC%A0%A4-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8-(%EB%A9%94%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80)?node-id=0-1&t=MQBacNBVvTVArK8y-0')">FIGMA</button>
+                        <button type="button" onclick="window.open('https://hgonnnnn.github.io/diesel/#')">WEB</button>
+                        <button type="button" onclick="window.open('img/디젤.pdf')">PROCESS</button>
+                    </div><!-- .btn end -->
+                </div><!-- .right end -->
+            </div><!-- .item_wrap end -->
+        </div><!-- .inner end -->
+    </div><!-- .projext end -->
+
+    <div class="design">
+        <div class="inner">
+            <h3>Design</h3>
+            <div class="swiper design_slide photoshop" dir="rtl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/photoshop01.jpg" data-fancybox>
+                            <img src="img/design01.png" alt="포토샵">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/photoshop02.jpg" data-fancybox>
+                            <img src="img/design02.png" alt="포토샵">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/photoshop03.jpg" data-fancybox>
+                            <img src="img/design3.png" alt="포토샵">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/photoshop04.png" data-fancybox>
+                            <img src="img/design05.png" alt="포토샵">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+
+                </div><!-- .swiper_wrapper end -->
+            </div><!-- .design_slide photoshop end -->
+
+            <div class="swiper design_slide illust">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/illust02.png" data-fancybox="00">
+                            <img src="img/illust_prev02.png" alt="일러스트">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/illust03.png" data-fancybox>
+                            <img src="img/illust_prev03.png" alt="일러스트">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/illust01.png" data-fancybox>
+                            <img src="img/illust_prev01.png" alt="일러스트">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/illust04.png" data-fancybox>
+                            <img src="img/illust_prev04.png" alt="일러스트">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+                    <div class="swiper-slide">
+                        <a href="img/fancybox/illust05.png" data-fancybox>
+                            <img src="img/illust_prev05.png" alt="일러스트">
+                        </a>
+                    </div><!-- .swiper_slide end -->
+
+                </div><!-- .swiper_wrapper end -->
+            </div><!-- .design_slide illust end -->
+
+        </div><!-- .inner end -->
+    </div><!-- .design end -->
+
+    <div class="contact">
+        <div class="inner">
+            <h3>Contact</h3>
+            <img src="img/item01.png" alt="배경" class="con_bg">
+            <div class="top">
+                <div class="item">
+                    <img src="img/call.png" alt="전화">
+                    <p>+82 10-5199-2714</p>
+                </div><!-- .left end -->
+                <div class="item">
+                    <img src="img/email.png" alt="이메일">
+                    <p>hgonnnnn5@gmail.com</p>
+                </div><!-- .right end -->
+            </div><!-- .top end -->
+            <div class="btm">
+                <strong>South Korea(KR)</strong>
+                <div class="map">
+                    <p>35°13'42.8"N </p>
+                    <p>128°53'21.7"E</p>
+                </div><!-- .map end -->
+                <p>© 2024 Kim Hyeon Gon. All Rights Reserved.</p>
+            </div><!-- .btm end -->
+        </div><!-- .inner end -->
+    </div><!-- .contact end -->
+</body>
+
+</html>
