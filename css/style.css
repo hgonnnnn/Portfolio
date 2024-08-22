@@ -979,7 +979,7 @@ body {
     }
     .project .inner .item_wrap .right .btn {
         margin: 0 auto;
-        column-gap: 0;
+        column-gap: 20px;
         justify-content: space-between;
     }
     .about .inner .item_wrap .right .item .box_wrap img {
