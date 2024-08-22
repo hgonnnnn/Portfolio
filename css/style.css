@@ -82,7 +82,8 @@ body {
     transition: 1s;
     z-index: 9;
 
-    display: none;  /* 수정완료 후 풀기 */
+    /* display: none;   */
+    /* 수정완료 후 풀기 */
 }
 .intro .intro_wrap {
     width: 100%;
