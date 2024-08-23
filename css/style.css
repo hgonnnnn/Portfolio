@@ -771,7 +771,7 @@ body {
         font-size: 60px;
     }
     .intro .intro_wrap {
-        row-gap: 30px;
+        row-gap: 35px;
     }
 }
 @media screen and (max-width: 670px) {
