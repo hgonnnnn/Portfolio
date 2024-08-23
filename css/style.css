@@ -781,6 +781,9 @@ body {
     .project .inner .item_wrap .right button {
         padding: 10px 10px;
     }
+    .main .inner figure {
+        width: 80%;
+    }
 }
 @media screen and (max-width: 620px) {
     .header .inner .mobile .gnb {
@@ -794,6 +797,9 @@ body {
     }
     .main .inner .text strong {
         font-size: 70px;
+    }
+    .main .inner .text span {
+        margin-top: 35px;
     }
     .main .inner .text span p:first-child {
         font-size: 45px;
@@ -911,7 +917,10 @@ body {
         width: 100%;
     }
     .main .inner .text strong {
-        font-size: 50px;
+        font-size: 60px;
+    }
+    .main .inner .text span {
+        margin-top: 30px;
     }
     .intro p {
         font-size: 25px;
@@ -921,6 +930,13 @@ body {
     }
 }
 @media screen and (max-width: 390px) {
+    .main .inner .pdf {
+        justify-content: flex-end;
+    }
+    .main {
+        height: 100vh;
+        position: relative;
+    }
     .header .inner .mobile .close {
         width: 25px;
     }
@@ -934,10 +950,17 @@ body {
         font-size: 20px;
     }
     .main .inner .pdf h2 {
-        font-size: 16px;
+        font-size: 50px;
+        position: absolute;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
     }
     .main .inner .text strong {
-        font-size: 45px;
+        font-size: 47px;
+    }
+    .main .inner .text span {
+        margin-top: 25px;
     }
     .main .inner .text span p:first-child {
         font-size: 35px;
@@ -957,6 +980,7 @@ body {
     }
     .main .inner {
         margin-bottom: 90px;
+        height: 78%;
     }
     .about .inner h3, .project .inner h3, .design .inner h3, .contact .inner h3 {
         font-size: 30px;
@@ -986,7 +1010,7 @@ body {
     .about .inner .item_wrap .right .item .box_wrap img {
         margin-right: 10px;
         margin-bottom: 10px;
-        width: 35px;
+        /* width: 35px; */
     }
     .project .inner .item_wrap .left img:last-child {
         border-radius: 10px;
