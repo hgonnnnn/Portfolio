@@ -945,6 +945,9 @@ body {
     }
 }
 @media screen and (max-width: 390px) {
+    .intro .intro_wrap {
+        padding-bottom: 30px;
+    }
     .main .inner .pdf {
         justify-content: flex-end;
     }
