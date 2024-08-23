@@ -432,6 +432,7 @@ body {
 .project .inner .item_wrap .btm .text p span {
     font-size: 16px;
     color: #999;
+    font-family: 'medium';
 }
 .project .inner .item_wrap .right .btn {
     display: flex;
