@@ -464,8 +464,8 @@ body {
     color: #fff;
 }
 .project .inner .item_wrap .right button:hover {
-    background-color: #3288ff;
-    color: #fff;
+    /* background-color: #3288ff;
+    color: #fff; */
     transform: scale(0.95);
 }
 
