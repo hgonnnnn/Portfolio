@@ -279,13 +279,13 @@ body {
 }
 .about .inner .item_wrap .left a {
     font-family: 'semibold';
-    font-size: 18px;
+    font-size: 16px;
     color: #3288ff;
     display: flex;
     align-items: center;
 }
 .about .inner .item_wrap .left a img {
-    width: 9px;
+    width: 8px;
     margin-left: 15px;
 }
 .about .inner .item_wrap .right {
@@ -530,7 +530,7 @@ body {
 .contact .inner .con_bg{
     width: 50%;
     height: 80%;
-    object-fit: fill;
+    object-fit: contain;
     position: absolute;
     top: 0;
     left: 50%;
@@ -620,6 +620,9 @@ body {
     }
 }
 @media screen and (max-width: 1080px) {
+    .contact .inner .con_bg {
+        height: 95%;
+    }
     .main .inner .text strong {
         font-size: 150px;
     }
@@ -875,7 +878,7 @@ body {
     }
     .contact .inner .con_bg {
         width: 80%;
-        height: 60vh;
+        /* height: 60vh; */
     }
     .contact .inner .top {
         flex-direction: column;
