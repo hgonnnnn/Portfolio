@@ -861,6 +861,8 @@ body {
     .project .inner .item_wrap .left {
         width: 70%;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
     .project .inner .item_wrap .right {
         width: 100%;
