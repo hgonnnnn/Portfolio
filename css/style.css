@@ -261,6 +261,7 @@ body {
     margin: 120px auto;
 }
 .about .inner h3,.project .inner h3,.design .inner h3 {
+    cursor: default;
     font-family: 'bold';
     font-size: 50px;
     margin-bottom: 40px;
@@ -280,6 +281,7 @@ body {
 .about .inner .item_wrap .left > img {
     width: 240px;
     height: 340px;
+    object-fit: cover;
 }
 .about .inner .item_wrap .left a {
     font-family: 'semibold';
@@ -529,6 +531,7 @@ body {
     align-items: center;
 }
 .contact .inner h3 {
+    cursor: default;
     font-family: 'bold';
     font-size: 50px;
     text-align: center;
