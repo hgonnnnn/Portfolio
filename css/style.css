@@ -101,6 +101,7 @@ body {
     row-gap: 40px;
 }
 .intro p{
+    cursor: default;
     margin-bottom: 50px;
     font-size: 55px;
 
@@ -113,6 +114,7 @@ body {
     transition: 0.7s;
 }
 .intro strong {
+    cursor: default;
     font-size: 80px;
 
     opacity: 0;
@@ -470,7 +472,10 @@ body {
     color: #fff; */
     transform: scale(0.95);
 }
-
+.project.five .inner .item_wrap .left img {
+    width: 100%;
+    object-fit: cover;
+}
 .design {
     width: 100%;
     /* display: grid; */
