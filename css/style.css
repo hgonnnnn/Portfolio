@@ -381,7 +381,9 @@ body {
     width: 49%;
     position: relative;
 }
-
+.project .inner .item_wrap .left img {
+    width: 100%;
+}
 .project .inner .item_wrap .left img:last-child {
     width: 30%;
     position: absolute;
