@@ -432,6 +432,12 @@ body {
     flex-direction: column;
     row-gap: 20px;
 }
+.project .inner .item_wrap .btm > span {
+    cursor: default;
+    font-family: 'regular';
+    font-size: 13px;
+    color: #999;
+}
 .project .inner .item_wrap .btm .text {
     display: flex;
     column-gap: 35px;
