@@ -338,16 +338,17 @@ body {
     font-family: 'medium';
 }
 .about .inner .item_wrap .right .item .box_wrap .box strong {
+    width: 30%;
     display: block;
     font-family: 'medium';
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: #999;
 }
 .about .inner .item_wrap .right .item .box_wrap .box p {
     /* width: 33%; */
     font-family: 'semibold';
-    font-size: 16px;
+    font-size: 17px;
 }
 /* .about .inner .item_wrap .right .item:nth-child(2) .box_wrap .box p:nth-child(2), */
 .about .inner .item_wrap .right .item:nth-child(3) .box_wrap .box p:nth-child(2) {
@@ -944,7 +945,10 @@ body {
         width: 100%;
         margin-bottom: 15px;
     }
-    .about .inner .item_wrap .right .item:first-child .box_wrap .box strong, .about .inner .item_wrap .right .item .box_wrap .box strong {
+    .about .inner .item_wrap .right .item .box_wrap .box strong {
+        width: 50% !important;
+    }
+    .about .inner .item_wrap .right .item:first-child .box_wrap .box strong{
         width: 20% !important;
     }
     .about .inner .item_wrap .right .item:first-child .box_wrap .box strong, .about .inner .item_wrap .right .item .box_wrap .box p {
