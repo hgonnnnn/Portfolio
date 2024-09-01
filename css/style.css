@@ -952,6 +952,7 @@ body {
         margin-bottom: 15px;
     }
     .about .inner .item_wrap .right .item .box_wrap .box strong {
+        font-size: 14px;
         width: 50% !important;
     }
     .about .inner .item_wrap .right .item:first-child .box_wrap .box strong{
@@ -989,6 +990,9 @@ body {
     }
     .main .inner .text strong {
         font-size: 60px;
+    }
+    .main .inner .text span p:first-child {
+        font-size: 40px;
     }
     .main .inner .text span {
         margin-top: 30px;
@@ -1046,7 +1050,7 @@ body {
         transform: translateX(50%);
     }
     .main .inner .text strong {
-        font-size: 47px;
+        font-size: 55px;
     }
     .main .inner .text span {
         margin-top: 25px;
