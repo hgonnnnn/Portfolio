@@ -69,6 +69,8 @@ body {
     z-index: 6;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
+
+    display: none;
 }
 .intro.off {
     transform: translateY(-100%);
